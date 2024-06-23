@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  # access mongo db through this service
+  # entrypoint defined in mongo.yaml
+  mongo-url: mongo-service
