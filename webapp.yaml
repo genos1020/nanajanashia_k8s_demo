@@ -44,7 +44,7 @@ metadata:
   name: webapp-service
 spec:
   # expose to external
-  type: NodePort
+  type: LoadBalancer
   selector:
     # need to match the label of target pod
     app: webapp
@@ -52,5 +52,3 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      # range between 30000 - 32767
-      nodePort: 30100
